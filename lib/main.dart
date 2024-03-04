@@ -1,42 +1,17 @@
+import 'package:chat_app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+void main(){
+  runApp(ChatApp());
+
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class ChatApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DefaultTabController(
-        length: 3, // عدد العلامات تبويب
-        child: Scaffold(
-          appBar: AppBar(
-            bottom: const TabBar(
-              tabs: [
-                Tab(text: 'Tab 1'),
-                Tab(text: 'Tab 2'),
-                Tab(text: 'Tab 3'),
-              ],
-            ),
-          ),
-          body: const TabBarView(
-            children: [
-              Center(
-                child: Text('محتوى التاب الأول'),
-              ),
-              Center(
-                child: Text('محتوى التاب الثاني'),
-              ),
-              Center(
-                child: Text('محتوى التاب الثالث'),
-              ),
-            ],
-          ),
-        ),
-      ),
+      home: LogInScreen(),
     );
   }
+
 }
